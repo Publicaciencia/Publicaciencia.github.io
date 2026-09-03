@@ -1,0 +1,33 @@
+PUBLICA — VERSIÓN FINAL LISTA PARA SUBIR
+
+ESTA CARPETA CONTIENE TODO EL SITIO PÚBLICO Y EL CÓDIGO DE APPS SCRIPT.
+
+YA ESTÁ CONFIGURADO:
+- Destino de correo: pavolinkjose@gmail.com
+- URL de Google Apps Script: incorporada en script.js
+- Formatos admitidos: PDF, DOC, DOCX, ODT, RTF y TXT
+- Tamaño máximo: 10 MB
+
+SUBIR A GITHUB:
+- index.html
+- styles.css
+- script.js
+- publicar.html
+- acerca.html
+- 404.html
+- robots.txt
+- sitemap.xml
+- lo-sustituible-y-lo-irreemplazable.html
+- menos-hijos-provincia-buenos-aires.html
+
+CONSERVAR EN GITHUB Y NO BORRAR:
+- google21ef3c3c5c852119.html
+
+NO SUBIR A GITHUB:
+- carpeta APPS_SCRIPT
+- LEEME_PRIMERO.txt
+
+La carpeta APPS_SCRIPT contiene Code.gs por respaldo. Ese código ya fue implementado en Google Apps Script.
+
+FLUJO FINAL:
+PUBLICA -> formulario -> Google Apps Script -> archivo adjunto a pavolinkjose@gmail.com
