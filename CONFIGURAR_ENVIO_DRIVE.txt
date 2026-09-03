@@ -1,0 +1,12 @@
+1. Creá en Google Drive una carpeta privada llamada PUBLICA - Recepción de trabajos.
+2. Copiá el ID de esa carpeta desde la URL.
+3. Entrá a https://script.google.com/ y creá un proyecto nuevo.
+4. Pegá el contenido de apps-script/Code.gs.
+5. Reemplazá TU_ID_CARPETA_DRIVE y TU_CORREO.
+6. Implementar > Nueva implementación > Aplicación web.
+7. Ejecutar como: Yo. Acceso: Cualquier usuario.
+8. Autorizá Drive y correo.
+9. Copiá la URL terminada en /exec.
+10. En script.js reemplazá TU_URL_WEB_APP_APPS_SCRIPT por esa URL.
+11. Subí a GitHub publicar.html y script.js.
+12. Probá con un PDF pequeño.

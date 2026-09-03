@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Publicá con nosotros | PUBLICA</title>
+<meta name="description" content="Condiciones y envío de trabajos a PUBLICA.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">P</span>
+      <span>PUBLICA</span>
+    </a>
+    <nav>
+      <a href="index.html#trabajos">Trabajos</a>
+      <a href="publicar.html">Publicá con nosotros</a>
+      <a href="acerca.html">Acerca de</a>
+      <a class="btn" href="publicar.html">Condiciones de publicación</a>
+    </nav>
+  </div>
+</header>
+
+<main class="article">
+  <span class="kicker">Convocatoria abierta</span>
+  <h1>Publicá con nosotros</h1>
+  <p class="lead">PUBLICA recibe producciones académicas de autores con o sin afiliación institucional.</p>
+
+<h2>Enviar trabajo</h2>
+<div class="notice">El archivo se envía de forma privada para evaluación. No se publica automáticamente.</div>
+
+<form id="uploadForm" method="post">
+  <div class="form-grid">
+    <div><label>Nombre y apellido</label><input name="nombre" required></div>
+    <div><label>Correo electrónico</label><input name="email" type="email" required></div>
+    <div class="full"><label>Título del trabajo</label><input name="titulo" required></div>
+    <div><label>Área</label><input name="area"></div>
+    <div><label>Cantidad de páginas</label><input name="paginas" type="number" min="1"></div>
+    <div class="full"><label>Resumen</label><textarea name="resumen" required></textarea></div>
+    <div class="full"><label>Palabras clave</label><input name="palabras_clave"></div>
+    <div class="full"><label>Archivo PDF</label><input id="pdfFile" type="file" accept="application/pdf,.pdf" required></div>
+    <input type="hidden" name="file_name" id="fileName">
+    <input type="hidden" name="file_type" id="fileType">
+    <input type="hidden" name="file_base64" id="fileBase64">
+    <div class="full"><label style="font-weight:400"><input type="checkbox" name="declaracion" value="SI" required style="width:auto;margin-right:8px">Declaro que poseo los derechos necesarios para enviar este trabajo y asumo responsabilidad intelectual por su contenido.</label></div>
+    <div class="full"><button class="btn" id="sendBtn" type="submit">Enviar trabajo</button></div>
+  </div>
+</form>
+<p id="uploadStatus" class="small"></p>
+
+<h2>Qué ocurre después</h2>
+<p>El PDF queda almacenado en una carpeta privada de recepción. PUBLICA recibe además un aviso por correo. La publicación se realiza únicamente después de la evaluación correspondiente.</p>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="brand"><span class="brand-mark">P</span><span>PUBLICA</span></div>
+      <p class="small">Plataforma académica independiente para la circulación abierta de producciones en ciencias sociales, educación, psicología y áreas afines.</p>
+    </div>
+    <div>
+      <strong>Repositorio</strong>
+      <p><a href="index.html#trabajos">Explorar trabajos</a><br>
+      <a href="publicar.html">Publicar</a><br>
+      <a href="acerca.html">Acerca de</a></p>
+    </div>
+    <div><strong>Derechos</strong><p class="small">© 2026 PUBLICA. Los derechos de cada obra corresponden a sus autores.</p></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
