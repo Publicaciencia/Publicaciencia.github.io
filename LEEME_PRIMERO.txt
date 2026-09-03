@@ -1,0 +1,35 @@
+PUBLICA — PAQUETE FINAL COMPLETO
+
+ESTE ZIP SÍ INCLUYE TODO EL SITIO:
+- index.html
+- styles.css
+- script.js
+- publicar.html
+- acerca.html
+- 404.html
+- robots.txt
+- sitemap.xml
+- lo-sustituible-y-lo-irreemplazable.html
+- menos-hijos-provincia-buenos-aires.html
+
+NO BORRES DE GITHUB:
+- google21ef3c3c5c852119.html
+
+NO SUBAS A LA RAÍZ DE GITHUB:
+- apps-script/
+- CONFIGURAR_ENVIO_DRIVE.txt
+- LEEME_PRIMERO.txt
+
+A GITHUB SUBÍ SOLAMENTE:
+index.html
+styles.css
+script.js
+publicar.html
+acerca.html
+404.html
+robots.txt
+sitemap.xml
+lo-sustituible-y-lo-irreemplazable.html
+menos-hijos-provincia-buenos-aires.html
+
+El archivo apps-script/Code.gs se pega en Google Apps Script, no en GitHub.
