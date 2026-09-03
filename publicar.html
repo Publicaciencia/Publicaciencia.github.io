@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Publicá con nosotros | PUBLICA</title>
+<meta name="description" content="Envío de trabajos académicos a PUBLICA.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">PUBLICA</a>
+    <nav>
+      <a href="index.html#trabajos">Trabajos</a>
+      <a href="publicar.html">Publicá con nosotros</a>
+      <a href="acerca.html">Acerca de</a>
+    </nav>
+  </div>
+</header>
+
+<main class="article">
+  <h1>Publicá con nosotros</h1>
+  <p>Podés enviar trabajos académicos para evaluación directamente desde esta página. El archivo llega como adjunto al correo de PUBLICA y no se publica automáticamente.</p>
+
+  <h2>Formatos admitidos</h2>
+  <p>PDF, DOC, DOCX, ODT, RTF y TXT. Tamaño máximo: 10 MB.</p>
+
+  <div class="notice">
+    El envío queda recibido para evaluación. La publicación se realiza únicamente después de la revisión correspondiente.
+  </div>
+
+  
+  <h2>1. Abonar arancel</h2>
+  <div class="card">
+    <p><strong>Arancel de publicación: $65.000 ARS</strong></p>
+    <p>Antes de enviar el trabajo, realizá el pago mediante Mercado Pago.</p>
+    <p><a class="btn" href="https://mpago.la/2TiM1ei" target="_blank" rel="noopener">Ir a Mercado Pago</a></p>
+    <p class="small">Conservá el comprobante: será obligatorio adjuntarlo en el paso siguiente.</p>
+  </div>
+
+  <h2>2. Adjuntar comprobante y trabajo</h2>
+
+<form id="uploadForm" method="post">
+    <div class="form-grid">
+      <div>
+        <label>Nombre y apellido</label>
+        <input name="nombre" required>
+      </div>
+      <div>
+        <label>Correo electrónico</label>
+        <input name="email" type="email" required>
+      </div>
+      <div class="full">
+        <label>Título del trabajo</label>
+        <input name="titulo" required>
+      </div>
+      <div>
+        <label>Área</label>
+        <input name="area" placeholder="Sociología, psicología, educación...">
+      </div>
+      <div>
+        <label>Cantidad de páginas</label>
+        <input name="paginas" type="number" min="1">
+      </div>
+      <div class="full">
+        <label>Resumen</label>
+        <textarea name="resumen" required></textarea>
+      </div>
+      <div class="full">
+        <label>Palabras clave</label>
+        <input name="palabras_clave" placeholder="Separadas por comas">
+      </div>
+
+      <div class="full">
+        <label>Comprobante de pago</label>
+        <input id="receiptFile" type="file"
+          accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
+          required>
+        <p class="small">Formatos admitidos: PDF, JPG, JPEG o PNG. Máximo 10 MB.</p>
+      </div>
+
+      <input type="hidden" name="receipt_name" id="receiptName">
+      <input type="hidden" name="receipt_type" id="receiptType">
+      <input type="hidden" name="receipt_base64" id="receiptBase64">
+
+      <div class="full">
+        <label>Archivo</label>
+        <input id="docFile" type="file"
+          accept=".pdf,.doc,.docx,.odt,.rtf,.txt,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.oasis.opendocument.text,application/rtf,text/rtf,text/plain"
+          required>
+      </div>
+
+      <input type="hidden" name="file_name" id="fileName">
+      <input type="hidden" name="file_type" id="fileType">
+      <input type="hidden" name="file_base64" id="fileBase64">
+
+      <div class="full">
+        <label style="font-weight:400">
+          <input type="checkbox" name="declaracion" value="SI" required style="width:auto;margin-right:8px">
+          Declaro que poseo los derechos necesarios para enviar este trabajo y que asumo responsabilidad intelectual por su contenido.
+        </label>
+      </div>
+
+      <div class="full">
+        <button class="btn" id="sendBtn" type="submit">Enviar trabajo y comprobante</button>
+      </div>
+    </div>
+  </form>
+
+  <p id="uploadStatus" class="small"></p>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><strong>PUBLICA</strong><p class="small">Plataforma académica independiente.</p></div>
+    <div><p class="small">© 2026 PUBLICA</p></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

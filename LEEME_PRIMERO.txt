@@ -1,0 +1,47 @@
+PUBLICA — PÁGINA ÍNTEGRA FINAL
+
+ESTA CARPETA CONTIENE TODO EL SITIO ACTUALIZADO.
+
+YA INCLUYE:
+- Portada
+- Estilos
+- Publicaciones
+- Sección "Publicá con nosotros"
+- Botón de Mercado Pago
+- Arancel: $65.000 ARS
+- Link de Mercado Pago: https://mpago.la/2TiM1ei
+- Comprobante de pago obligatorio
+- Trabajo obligatorio
+- Envío de ambos archivos al correo: pavolinkjose@gmail.com
+- Formatos del trabajo: PDF, DOC, DOCX, ODT, RTF y TXT
+- Formatos del comprobante: PDF, JPG, JPEG y PNG
+- Tamaño máximo: 10 MB por archivo
+- Google Apps Script ya configurado con tu correo
+- script.js ya conectado con la URL real de Apps Script
+
+ARCHIVOS PÚBLICOS PARA SUBIR A GITHUB:
+- index.html
+- styles.css
+- script.js
+- publicar.html
+- acerca.html
+- 404.html
+- robots.txt
+- sitemap.xml
+- lo-sustituible-y-lo-irreemplazable.html
+- menos-hijos-provincia-buenos-aires.html
+
+CONSERVAR EN GITHUB:
+- google21ef3c3c5c852119.html
+
+NO SUBIR A GITHUB:
+- carpeta APPS_SCRIPT
+- LEEME_PRIMERO.txt
+- LEEME.txt
+
+IMPORTANTE SOBRE GOOGLE APPS SCRIPT:
+Como Code.gs fue modificado para recibir también el comprobante, tenés que actualizar la implementación existente en Google Apps Script para que use esta nueva versión del código.
+No hace falta crear otra cuenta ni otro proyecto.
+
+FLUJO FINAL:
+Autor -> paga en Mercado Pago -> adjunta comprobante + trabajo -> PUBLICA -> Google Apps Script -> ambos archivos llegan a pavolinkjose@gmail.com
