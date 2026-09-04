@@ -1,20 +1,12 @@
-ARCHIVOS PARA PUBLICAR ESTE TRABAJO EN PUBLICA
+PUBLICA — archivos de indexación
 
-SUBIR A LA RAÍZ DE GITHUB:
+Subir/reemplazar en la raíz del repositorio:
 1. lo-sustituible-y-lo-irreemplazable.html
-2. lo-sustituible-y-lo-irreemplazable.pdf
-3. lo-sustituible-y-lo-irreemplazable.docx
+2. robots.txt
+3. sitemap.xml
 
-NO SUBIR:
-- AGREGAR_AL_INDEX.txt
-- AGREGAR_A_SITEMAP.txt
-- LEEME.txt
+NO cambiar el nombre del PDF ya publicado:
+lo-sustituible-y-lo-irreemplazable.pdf
 
-DESPUÉS:
-1. Abrir index.html y agregar el bloque de AGREGAR_AL_INDEX.txt.
-2. Abrir sitemap.xml y agregar las líneas de AGREGAR_A_SITEMAP.txt.
-3. Confirmar los cambios en GitHub.
-4. En Google Search Console, inspeccionar y solicitar indexación de:
-   https://publicaciencia.github.io/lo-sustituible-y-lo-irreemplazable.html
-5. También se puede solicitar indexación del PDF:
-   https://publicaciencia.github.io/lo-sustituible-y-lo-irreemplazable.pdf
+Después de subirlos, abrir Google Search Console y enviar:
+https://pavolinkjose-code.github.io/sitemap.xml
