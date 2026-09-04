@@ -1,8 +1,0 @@
-Agregar dentro de <urlset> en sitemap.xml:
-
-<url>
-  <loc>https://publicaciencia.github.io/lo-sustituible-y-lo-irreemplazable.html</loc>
-</url>
-<url>
-  <loc>https://publicaciencia.github.io/lo-sustituible-y-lo-irreemplazable.pdf</loc>
-</url>
