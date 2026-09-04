@@ -1,9 +1,0 @@
-Agregar esta tarjeta dentro de la sección de trabajos de index.html:
-
-<article class="card" data-work>
-  <small>Sociología · 2026</small>
-  <h3><a href="lo-sustituible-y-lo-irreemplazable.html">Lo sustituible y lo irreemplazable</a></h3>
-  <p>Trabajo sobre transformaciones contemporáneas de las relaciones, la dependencia y la subjetividad a partir de categorías de Georg Simmel.</p>
-  <div class="meta">José Luis Pavolink · 2026</div>
-  <div class="tags"><span class="tag">Simmel</span><span class="tag">Subjetividad</span><span class="tag">Vínculos sociales</span></div>
-</article>
