@@ -5,27 +5,112 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Publicá con nosotros | PUBLICA</title>
 <meta name="description" content="Envío de trabajos académicos a PUBLICA.">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://publicaciencia.github.io/publicar.html">
 <link rel="stylesheet" href="styles.css">
+<style>
+.submission-box{max-width:780px;margin:0 auto;padding:36px 20px}
+.submission-box form{display:grid;gap:18px}
+.submission-box label{font-weight:600;display:block;margin-bottom:6px}
+.submission-box input,.submission-box textarea{width:100%;box-sizing:border-box;padding:12px;border:1px solid #ccd2da;border-radius:8px;font:inherit;background:#fff}
+.submission-box textarea{min-height:140px;resize:vertical}
+.submission-box button{padding:14px 20px;border:0;border-radius:9px;background:#111827;color:#fff;font-weight:700;cursor:pointer}
+.submission-box button:disabled{opacity:.55;cursor:not-allowed}
+.small{font-size:.92rem;color:#667085}
+#estado{margin-top:8px;font-weight:600}
+</style>
 </head>
 <body>
+
 <header>
   <div class="container nav">
-    <a class="brand" href="/"><span class="brand-mark">P</span><span>PUBLICA</span></a>
-    <nav><a href="/#trabajos">Trabajos</a><a href="/acerca.html">Acerca de</a></nav>
+    <a class="brand" href="index.html">
+      <span class="brand-mark">P</span>
+      <span>PUBLICA</span>
+    </a>
+    <nav>
+      <a href="index.html#trabajos">Trabajos</a>
+      <a href="acerca.html">Acerca de</a>
+    </nav>
   </div>
 </header>
-<main class="article">
-  <span class="kicker">Convocatoria abierta</span>
-  <h1>Publicá con nosotros</h1>
-  <p class="lead">PUBLICA recibe artículos, ensayos e investigaciones de autores con o sin afiliación institucional.</p>
-  <h2>Enviar trabajo</h2>
-  <p>El envío se realiza por correo electrónico con el PDF adjunto, título, autoría, resumen y palabras clave.</p>
-  <p><strong>Importante:</strong> reemplazá en este archivo la dirección <code>TU_CORREO_AQUI</code> por el correo de recepción del repositorio.</p>
-  <p><a class="btn" href="mailto:TU_CORREO_AQUI?subject=Env%C3%ADo%20de%20trabajo%20a%20PUBLICA">Enviar trabajo por correo</a></p>
-  <p class="small">Una vez aprobado y publicado, cada trabajo recibe una página propia en el repositorio y se incorpora al sitemap para que Google pueda descubrirlo.</p>
+
+<main class="submission-box">
+  <h1>Enviar trabajo</h1>
+  <p>PUBLICA recibe artículos, ensayos e investigaciones de autores con o sin afiliación institucional.</p>
+
+  <form id="submissionForm" method="post" action="https://script.google.com/macros/s/AKfycbyrmv4Tu8yxm1yT_3u5wqNIT9uyWU_l6fiDgXKLNCij5_7d-7pVMgFCoOsLL8qVfWex/exec" accept-charset="UTF-8">
+    <div><label for="nombre">Nombre y apellido</label><input id="nombre" name="nombre" required></div>
+    <div><label for="email">Correo electrónico</label><input id="email" name="email" type="email" required></div>
+    <div><label for="titulo">Título del trabajo</label><input id="titulo" name="titulo" required></div>
+    <div><label for="area">Área</label><input id="area" name="area" placeholder="Sociología, psicología, educación..."></div>
+    <div><label for="paginas">Cantidad de páginas</label><input id="paginas" name="paginas" type="number" min="1"></div>
+    <div><label for="palabras_clave">Palabras clave</label><input id="palabras_clave" name="palabras_clave" placeholder="Ej.: Simmel, subjetividad, modernidad"></div>
+    <div><label for="resumen">Resumen</label><textarea id="resumen" name="resumen" required></textarea></div>
+    <div><label for="archivo">Archivo PDF</label><input id="archivo" type="file" accept="application/pdf,.pdf" required><p class="small">Tamaño máximo: 10 MB.</p></div>
+
+    <input type="hidden" name="file_base64" id="file_base64">
+    <input type="hidden" name="file_name" id="file_name">
+
+    <button id="enviarBtn" type="submit">Enviar trabajo</button>
+    <div id="estado" aria-live="polite"></div>
+  </form>
 </main>
-<footer><div class="container">© 2026 PUBLICA.</div></footer>
+
+<footer><div class="container"><p>© 2026 PUBLICA.</p></div></footer>
+
+<script>
+const form = document.getElementById("submissionForm");
+const archivo = document.getElementById("archivo");
+const base64Input = document.getElementById("file_base64");
+const fileNameInput = document.getElementById("file_name");
+const estado = document.getElementById("estado");
+const btn = document.getElementById("enviarBtn");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const file = archivo.files[0];
+
+  if (!file) {
+    estado.textContent = "Seleccioná un archivo PDF.";
+    return;
+  }
+
+  if (file.type && file.type !== "application/pdf") {
+    estado.textContent = "El archivo debe ser PDF.";
+    return;
+  }
+
+  if (file.size > 10 * 1024 * 1024) {
+    estado.textContent = "El PDF supera el límite de 10 MB.";
+    return;
+  }
+
+  if (form.action.includes("https://script.google.com/macros/s/AKfycbyrmv4Tu8yxm1yT_3u5wqNIT9uyWU_l6fiDgXKLNCij5_7d-7pVMgFCoOsLL8qVfWex/exec")) {
+    estado.textContent = "Falta conectar la URL del receptor de Google Apps Script.";
+    return;
+  }
+
+  btn.disabled = true;
+  estado.textContent = "Preparando el archivo...";
+
+  const reader = new FileReader();
+
+  reader.onload = function () {
+    const base64 = reader.result.split(",")[1];
+    base64Input.value = base64;
+    fileNameInput.value = file.name;
+    estado.textContent = "Enviando...";
+    form.submit();
+  };
+
+  reader.onerror = function () {
+    btn.disabled = false;
+    estado.textContent = "No se pudo leer el archivo.";
+  };
+
+  reader.readAsDataURL(file);
+});
+</script>
+
 </body>
 </html>

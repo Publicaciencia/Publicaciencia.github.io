@@ -1,0 +1,15 @@
+PUBLICA - ARCHIVOS PARA RESTAURAR EL ENVÍO
+
+1. GITHUB
+   Subir/reemplazar:
+   - publicar.html
+
+2. GOOGLE APPS SCRIPT
+   Abrir el proyecto PUBLICA y reemplazar el contenido de:
+   - Code.gs
+
+IMPORTANTE:
+- publicar.html ya está conectado a la URL /exec recuperada.
+- Code.gs ya contiene el correo de destino configurado.
+- No hace falta subir Code.gs a GitHub.
+- Después de reemplazar ambos, probar con un PDF pequeño.
