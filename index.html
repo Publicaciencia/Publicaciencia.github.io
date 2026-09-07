@@ -1,71 +1,14 @@
 <!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PUBLICA | Repositorio académico independiente</title>
-<meta name="description" content="Repositorio académico independiente de acceso abierto para trabajos de ciencias sociales, psicología, educación y áreas afines.">
-<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
-<link rel="canonical" href="https://publicaciencia.github.io/">
-<link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "name":"PUBLICA",
-  "url":"https://publicaciencia.github.io/",
-  "description":"Repositorio académico independiente de acceso abierto."
-}
-</script>
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Repositorio Científico Abierto</title><meta name="description" content="Repositorio abierto para difusión de trabajos científicos y académicos."><link rel="stylesheet" href="style.css"></head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="/"><span class="brand-mark">P</span><span>PUBLICA</span></a>
-    <nav>
-      <a href="/#trabajos">Trabajos</a>
-      <a href="/publicar.html">Publicá con nosotros</a>
-      <a href="/acerca.html">Acerca de</a>
-    </nav>
-  </div>
-</header>
-
+<header class="nav"><div class="wrap navin"><a class="brand" href="#inicio"><span class="logo">R</span>Repositorio Científico Abierto</a><nav class="links"><a href="#publicaciones">Publicaciones</a><a href="#como">Cómo funciona</a><a href="#enviar">Enviar trabajo</a><a href="#criterios">Criterios</a><a class="btn" href="#enviar">Publicá con nosotros</a></nav></div></header>
 <main>
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="kicker">Repositorio académico independiente · Acceso abierto</span>
-      <h1>PUBLICA</h1>
-      <p class="lead">Trabajos académicos con página propia, datos bibliográficos y acceso estable desde la web.</p>
-      <p><a class="btn" href="#trabajos">Ver trabajos</a> <a class="btn secondary" href="/publicar.html">Publicá con nosotros</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="trabajos">
-  <div class="container">
-    <div class="section-head">
-      <div><span class="kicker">Repositorio</span><h2>Trabajos publicados</h2></div>
-    </div>
-    <div class="grid">
-      <article class="card">
-        <small>PUBLICA-2026-001 · Sociología</small>
-        <h3><a href="/lo-sustituible-y-lo-irreemplazable.html">Lo sustituible y lo irreemplazable</a></h3>
-        <p>Transformaciones contemporáneas de los vínculos, la dependencia interpersonal y la organización sistémica de la vida social.</p>
-        <div class="meta">José Luis Pavolink · 2026</div>
-      </article>
-
-      <article class="card">
-        <small>PUBLICA-2026-002 · Demografía social</small>
-        <h3><a href="/menos-hijos-provincia-buenos-aires.html">Menos hijos en la Provincia de Buenos Aires: una transformación en curso</a></h3>
-        <p>Análisis de la disminución reciente de la fecundidad y los nacimientos en la Provincia de Buenos Aires.</p>
-        <div class="meta">José Luis Pavolink · 2026</div>
-      </article>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer><div class="container">© 2026 PUBLICA · Repositorio académico independiente.</div></footer>
-</body>
-</html>
+<section id="inicio" class="hero"><div class="wrap"><div class="eyebrow">Difusión científica abierta</div><h1>Un espacio público para que los trabajos circulen.</h1><p>Publicación y consulta de producción científica y académica. Los trabajos publicados quedan accesibles desde esta página con autor, título y PDF.</p><div class="heroactions"><a class="btn" href="#enviar">Enviar trabajo</a><a class="btn secondary" href="#publicaciones">Ver publicaciones</a></div><div class="stats"><div class="stat"><b>PDF público</b><span>Los trabajos aprobados se consultan en línea.</span></div><div class="stat"><b>Máximo 20 páginas</b><span>Formato de envío: PDF.</span></div><div class="stat"><b>$65.000 ARS</b><span>Arancel de publicación.</span></div></div></div></section>
+<section id="publicaciones" class="section"><div class="wrap"><h2>Publicaciones</h2><p class="lead">Trabajos aprobados y disponibles para consulta pública.</p><div id="publication-list" class="pubgrid"><div class="empty">Cargando publicaciones…</div></div></div></section>
+<section id="como" class="section"><div class="wrap"><h2>Cómo funciona</h2><p class="lead">El envío, el pago y la publicación forman un único proceso.</p><div class="steps"><div class="card step"><div class="n">1</div><b>Enviar</b><p>Completás los datos y cargás el PDF.</p></div><div class="card step"><div class="n">2</div><b>Pagar</b><p>Al enviar, continuás a Mercado Pago.</p></div><div class="card step"><div class="n">3</div><b>Verificar</b><p>Se controla el archivo y se verifica el pago.</p></div><div class="card step"><div class="n">4</div><b>Publicar</b><p>Una vez aprobado, aparece en Publicaciones con acceso al PDF.</p></div></div></div></section>
+<section id="enviar" class="section"><div class="wrap"><h2>Enviar trabajo</h2><p class="lead">Cargá el PDF y continuá al pago. No hace falta enviar el archivo por correo.</p><div class="card formcard"><div class="fee">$65.000 ARS</div><div class="note">Arancel de publicación · máximo 20 páginas.</div><div class="notice">El botón guarda primero el trabajo y luego te dirige a Mercado Pago. La publicación se realiza después de verificar el pago.</div><form id="paper-form"><div class="grid2"><div class="field"><label for="author">Autor/a</label><input id="author" name="author" required autocomplete="name"></div><div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" required autocomplete="email"></div></div><div class="field"><label for="title">Título del trabajo</label><input id="title" name="title" required></div><div class="field"><label for="abstract">Resumen o nota breve (opcional)</label><textarea id="abstract" name="abstract" rows="4"></textarea></div><div class="field"><label for="pdf">Archivo PDF</label><input id="pdf" name="pdf" type="file" accept="application/pdf,.pdf" required><div class="note">Solo PDF. Máximo 10 MB. El trabajo debe tener como máximo 20 páginas.</div></div><div class="field"><label style="display:flex;gap:10px;align-items:flex-start;font-weight:400"><input id="declaracion" type="checkbox" required style="width:auto;margin-top:4px"><span>Declaro que poseo los derechos necesarios para enviar este trabajo, que la autoría consignada es correcta y que asumo responsabilidad por el contenido presentado.</span></label></div><button id="submit-btn" class="btn" type="submit">Enviar trabajo y pagar $65.000</button><div id="form-status" class="status" aria-live="polite"></div></form></div></div></section>
+<section id="criterios" class="section"><div class="wrap"><h2>Criterios</h2><p class="lead">El repositorio está orientado a trabajos científicos, académicos y de investigación.</p><div class="steps"><div class="card step"><b>Autoría identificada</b><p>Debe constar la autoría del trabajo.</p></div><div class="card step"><b>Formato PDF</b><p>El archivo enviado será el que se publique.</p></div><div class="card step"><b>Hasta 20 páginas</b><p>Los trabajos que excedan el máximo no se publican.</p></div><div class="card step"><b>Revisión previa</b><p>La publicación no es automática: requiere verificación.</p></div></div></div></section>
+</main><footer class="footer"><div class="wrap">Repositorio Científico Abierto · Publicación y circulación de producción académica.</div></footer>
+<script type="module" src="app.js"></script>
+</body></html>

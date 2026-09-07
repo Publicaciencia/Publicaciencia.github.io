@@ -1,12 +1,26 @@
-PUBLICA — ARCHIVOS A REEMPLAZAR
+PUBLICA — CORRECCIÓN ENVÍO PDF + DECLARACIÓN
 
-Reemplazar en GitHub solamente:
+REEMPLAZAR EN GITHUB SOLAMENTE:
+1. index.html
+2. app.js
 
-1. publicar.html
+NO borrar ni modificar otros archivos.
+NO tocar Code.gs.
 
-No borrar ni modificar ningún otro archivo.
+Qué corrige:
+- agrega la declaración obligatoria al formulario de la portada;
+- verifica que esté marcada antes de enviar;
+- envía declaracion=si, acepta_declaracion=si, declaracion_autoria=si y responsabilidad=si;
+- conserva el PDF en Base64 y el nombre del archivo;
+- mantiene el endpoint actual de Google Apps Script;
+- conserva el límite de 10 MB.
 
-Después:
-- esperar 1–2 minutos
-- abrir PUBLICA
-- probar nuevamente el envío de un PDF
+Después de reemplazar:
+1. esperar 1–2 minutos a GitHub Pages;
+2. Ctrl+F5;
+3. completar el formulario;
+4. seleccionar PDF;
+5. marcar la declaración;
+6. enviar.
+
+Resultado esperado: el backend deja de responder “Falta aceptar la declaración de autoría y responsabilidad” y procesa el PDF.
