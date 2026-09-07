@@ -1,15 +1,17 @@
-PUBLICA - ARCHIVOS PARA RESTAURAR EL ENVÍO
+PUBLICA — archivos de indexación
 
-1. GITHUB
-   Subir/reemplazar:
-   - publicar.html
+Subir estos DOS archivos a la raíz del repositorio Publicaciencia.github.io:
+1. robots.txt
+2. sitemap.xml
 
-2. GOOGLE APPS SCRIPT
-   Abrir el proyecto PUBLICA y reemplazar el contenido de:
-   - Code.gs
+Deben quedar accesibles exactamente en:
+https://publicaciencia.github.io/robots.txt
+https://publicaciencia.github.io/sitemap.xml
 
-IMPORTANTE:
-- publicar.html ya está conectado a la URL /exec recuperada.
-- Code.gs ya contiene el correo de destino configurado.
-- No hace falta subir Code.gs a GitHub.
-- Después de reemplazar ambos, probar con un PDF pequeño.
+Luego, en Google Search Console > Sitemaps:
+- eliminar el envío anterior de sitemap.xml si sigue mostrando error
+- volver a enviar: sitemap.xml
+
+Después inspeccionar:
+https://publicaciencia.github.io/
+y pulsar "Solicitar indexación".
