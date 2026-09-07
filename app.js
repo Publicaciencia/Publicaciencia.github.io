@@ -70,14 +70,14 @@ function setupSubmissionForm() {
     const email = document.getElementById("email")?.value.trim();
     const title = document.getElementById("title")?.value.trim();
     const abstract = document.getElementById("abstract")?.value.trim();
-    const declaracion = document.getElementById("declaracion");
+    const declaracion = document.getElementById("declaracion")?.checked;
 
     if (!author || !email || !title || !file) {
       status.textContent = "Completá autor, correo, título y PDF.";
       return;
     }
 
-    if (!declaracion?.checked) {
+    if (!declaracion) {
       status.textContent = "Debés aceptar la declaración de autoría y responsabilidad.";
       return;
     }
@@ -112,12 +112,12 @@ function setupSubmissionForm() {
           paginas: "",
           palabras_clave: "",
           resumen: abstract || "Sin resumen informado.",
+          file_base64: base64,
+          file_name: file.name,
           declaracion: "si",
           acepta_declaracion: "si",
           declaracion_autoria: "si",
-          responsabilidad: "si",
-          file_base64: base64,
-          file_name: file.name
+          responsabilidad: "si"
         });
       } catch (err) {
         button.disabled = false;
