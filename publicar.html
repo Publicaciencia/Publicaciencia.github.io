@@ -85,11 +85,6 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  if (form.action.includes("https://script.google.com/macros/s/AKfycbyrmv4Tu8yxm1yT_3u5wqNIT9uyWU_l6fiDgXKLNCij5_7d-7pVMgFCoOsLL8qVfWex/exec")) {
-    estado.textContent = "Falta conectar la URL del receptor de Google Apps Script.";
-    return;
-  }
-
   btn.disabled = true;
   estado.textContent = "Preparando el archivo...";
 
